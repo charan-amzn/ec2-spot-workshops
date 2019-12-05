@@ -22,7 +22,7 @@ exports.run_trade = function(req, res) {
 
     if (errors) {
         //If there are errors render the form again, passing the previously entered values and errors
-        res.render('index', { title: 'lab3: Spot Stock Trading Lab - validation failed', errors: errors, stock:req.body.stock, short:req.body.short, long:req.body.long, days:req.body.days, iter:req.body.iter});
+        res.render('index', { title: 'Spot Stock Trading Lab - validation failed', errors: errors, stock:req.body.stock, short:req.body.short, long:req.body.long, days:req.body.days, iter:req.body.iter});
         return;
     }
     else {
@@ -81,13 +81,13 @@ exports.run_trade = function(req, res) {
                     var errors = new Array();
                     errors.push(err);
                     res.render('index', {
-                        title: 'lab3: Spot Stock Trading Lab - validation failed',
+                        title: 'Spot Stock Trading Lab - validation failed',
                         errors: errors
                     });
                     return;
                 } else {
                     res.render('index', {
-                        title: 'lab3: Spot Stock Trading Lab - validation failed',
+                        title: 'Spot Stock Trading Lab - validation failed',
                         sqs: 'Trade Strategy Executing'
                     });
                     return;
@@ -96,7 +96,7 @@ exports.run_trade = function(req, res) {
         }
         else {
             res.render('index', {
-                title: 'lab3: Spot Stock Trading Lab - Preview Response',
+                title: 'Spot Stock Trading Lab - Preview Response',
                 previewParams: params
             });
         }

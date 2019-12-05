@@ -2,7 +2,7 @@ var AWS = require('aws-sdk');
 var fs = require('fs');
 
 exports.index = function(req, res) {
-    res.render('index', { title: 'lab3: Spot Stock Trading Lab' });
+    res.render('index', { title: 'Spot Stock Trading Lab' });
 };
 
 
